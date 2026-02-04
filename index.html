@@ -12,34 +12,46 @@
       margin: 20px;
       line-height: 1.6;
     }
-    a { color: #6699cc; }
-    a:visited { color: #9966cc; }
+    a {
+      color: #6699cc;
+    }
+    a:visited {
+      color: #9966cc;
+    }
     h1 {
       font-size: 24px;
       font-weight: normal;
       margin-bottom: 5px;
+      text-align: left;
     }
     h2 {
       font-size: 16px;
       font-weight: normal;
+      padding-bottom: 3px;
       margin-top: 30px;
       margin-bottom: 10px;
+      text-align: left;
     }
-    figcaption {
-	font-size: 11px;
-	color: #888;
-	text-align: center;
-   }
     .container {
       max-width: 600px;
+      width: 100%;
       padding: 0 15px;
+      box-sizing: border-box;
       margin: 0 auto;
+      text-align: center;
     }
-    .header { margin-bottom: 20px; }
+    .header {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .header a {
+      font-size: 12px;
+    }
     .about-section {
       display: flex;
       gap: 20px;
       align-items: flex-start;
+      text-align: left;
     }
     .photo {
       width: 120px;
@@ -53,33 +65,46 @@
       color: #666;
       font-size: 11px;
     }
-    .about-text { flex: 1; }
-    .small { font-size: 12px; color: #888; }
-    .main-links {
-      text-align: center;
+    .about-text {
+      flex: 1;
     }
-    .main-links a {
+    .project {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .project-title {
+      color: #ffffff;
+      text-align: left;
       display: block;
-      font-size: 18px;
-      margin-bottom: 12px;
+    }
+    .small {
+      font-size: 12px;
+      color: #888;
+    }
+    .details {
+      display: none;
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 8px;
+      text-align: left;
+    }
+    .toggle {
+      font-size: 12px;
+      color: #6699cc;
+      cursor: pointer;
       text-decoration: underline;
+      padding: 5px 0;
+      display: inline-block;
     }
-    .main-links-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .side-image {
-      width: 180px;
-      height: auto;
-      border: 1px solid #444;
+    .toggle:hover {
+      color: #99ccff;
     }
     @media (max-width: 480px) {
       .about-section {
         flex-direction: column;
         align-items: center;
+      }
+      .about-text {
         text-align: center;
       }
     }
@@ -88,36 +113,26 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>Ryan M. Kim</h1>
+      <h1>Ryan Kim</h1>
+      <a href="resume.pdf">resume.pdf</a>
+      <div class="small">last updated: 2025</div>
     </div>
+    
     <div class="about-section">
       <div class="photo">[photo]</div>
       <div class="about-text">
-        Electrical and Computer Engineering sophmore at Northeastern University, Boston MA. Interested in computer architecture, chips, deep learning, semiconductors, and <a href="https://en.wikipedia.org/wiki/The_Sun_Also_Rises">Ernest Hemingway</a>.
-	<div style="font-size: 12px; color: #888; margin-top: 8px;">Born in <a href="https://en.wikipedia.org/wiki/Franz_the_Bear">Utah</a>, grew up in Massachuttes. Play the piano, cello, and air guitar. Love The Strokes and Geese.</div>
+        Software developer based in San Francisco. Interested in systems programming, web technologies, and open source. Currently seeking new opportunities.
       </div>
     </div>
-    <div class="main-links-section">
-      <div class="main-links">
-        <a href="projects.html">projects</a>
-        <div class="small">password: not_an_ai</div>
-        <a href="resume.pdf">resume</a>
-        <a href="misc.html">misc</a>
-      </div>
-      <figure>
-      	<img src="The_Tilled_Field.jpg" alt="The Tilled Field by Joan Miró" class="side-image">
-      	<figcaption>
-  		<a href="https://en.wikipedia.org/wiki/The_Tilled_Field">The Tilled Field</a> by Joan Miró
-	</figcaption>
-      </figure>
-    </div>
+    
     <h2>other</h2>
-    <p>
-      email: kim.ryan8 [at] northeastern [dot] edu<br>
-      <a href="https://github.com/hootloot">github</a><br>
-      <a href="https://www.linkedin.com/in/ryan-kim-865356324/">linkedin</a>
+    <p style="text-align: left;">
+      email: ryan@example.com<br>
+      github: <a href="#">github.com/ryankim</a><br>
+      linkedin: <a href="#">linkedin.com/in/ryankim</a>
     </p>
-    <div class="small">site made with Pollen and Racket, last updated 2026</div>
+    
+    <div class="small">© 2025 ryan kim</div>
   </div>
 </body>
 </html>
